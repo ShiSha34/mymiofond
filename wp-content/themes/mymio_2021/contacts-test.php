@@ -80,7 +80,7 @@ get_header();
 
                  <?php
                  $form_settings = [
-                     'submit_button' => 'Отправить заяву',
+                     'submit_button' => 'Отправить',
                      'name' => 'contact',
                      'form_fields' => [
                          [

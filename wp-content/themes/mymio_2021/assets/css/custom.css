@@ -4593,6 +4593,10 @@ section#quote .partners {
 section#quote .partners > div {
     border-radius: 10px;
 }
+
+section#quote .partners > div:first-child {
+    display: none;
+}
 section#quote .partners > div:hover {
     -webkit-box-shadow: 0 5px 20px 0 rgb(18 25 38 / 10%);
             box-shadow: 0 5px 20px 0 rgb(18 25 38 / 10%);
@@ -4606,7 +4610,33 @@ section#quote .wrap + .wrap {
     padding-top: 135px;
 }
 
+#proggrams-description .items.row div:nth-child(4) {
+    display: none;
+}
 
+.hide {
+    display: none !important;
+}
+
+.quatrain {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.quatrain__elem {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.quatrain__elem:last-child {
+    font-style: normal;
+}
+
+.quatrain__elem > div {
+    padding: 0 10px 0 0;
+}
 /*media queries*/
 @media (min-width: 992px) {
     .heading-article.bg {

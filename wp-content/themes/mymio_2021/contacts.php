@@ -99,7 +99,7 @@ get_header();
                
             </div>
         </section>
-        <section class="request-form-container">
+        <section class="request-form-container" id="request-form-container">
             <div class="maxwidth-theme">
              <div class="heading-article">
                    <h1>Как стать подопечными фонда</h1>

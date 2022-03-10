@@ -592,18 +592,18 @@ get_header();
                                        <span>Март</span>
                                     </div>
                                </a>
-                               <a class="disable">
+                               <a target="blank" href="<? echo get_home_url()?>/o-fonde/otchet-aprel-2021">
                                     <div>
                                        <span>Апрель</span>
                                     </div>
                                </a>
                                
-                               <a class="disable">
+                               <a target="blank" href="<? echo get_home_url()?>/o-fonde/otchet-maj-2021">
                                     <div>
                                        <span>Май</span>
                                     </div>
                                </a>
-                               <a class="disable">
+                               <a target="blank" href="<? echo get_home_url()?>/o-fonde/otchet-iyun-2021">
                                     <div>
                                        <span>Июнь</span>
                                     </div>

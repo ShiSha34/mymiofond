@@ -174,7 +174,7 @@ World Federation of Societies of Anaesthesiologist (WFSA)<br>Редактор а
                     </a>
                             </li>
                             <li>
-                              <a class="fancybox" data-fancybox="gallery" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/1_rukovodstvo-dlya-vrachei.pdf">
+                              <a class="fancybox" data-fancybox="gallery" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/3_podgotovka_k_operacii.pdf">
                     <div><img src="<? echo get_template_directory_uri()?>/assets/images/doc_preview.png"></div><span class="docs-caption open">Открыть</span>
                     </a>
                             </li>
@@ -218,7 +218,7 @@ World Federation of Societies of Anaesthesiologist (WFSA)<br>Редактор а
                         <ul>
                             <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/rvracham/1_rukovodstvo-dlya-vrachei.pdf">Рекомендации по ведению пациентов с миодистрофией Дюшенна.</a></li>
                             <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/2_ivl.pdf">Искусственная вентиляция легких.</a></li>
-                            <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/1_rukovodstvo-dlya-vrachei.pdf">Подготовка к операции.</a></li>
+                            <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/3_podgotovka_k_operacii.pdf">Подготовка к операции.</a></li>
                             <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/4_serdechno-sosudistaya.pdf">Сердечно-сосудистая система. Алгоритм наблюдения за состоянием.</a></li>
                             <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/rvracham/5_broshyura_a5-avertikal.pdf">Статьи по узким и проблемным вопроса от эндокринологии до экстренных ситуаций.</a></li>
                             <li><a class="fancybox" data-fancybox="gallery2" data-fancybox-type="iframe" href="<? echo get_home_url()?>/ViewerJS/#../wp-content/themes/mymio_2021/assets/docs/vracham/6_PAMYATKA-po-DN_korrekt.pdf">Температура и признаки дыхательной недостаточности. Алгоритм действий.</a></li>

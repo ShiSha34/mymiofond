@@ -63,27 +63,20 @@ get_header();
                                     </div>
                                     
                                     <div class="progress-bar">
-                                        <?php $percent = $campaign->target ? round(100.0 * $campaign->total_funded / $campaign->target, 1) : 0;
-            $percent = $percent > 100.0 ? 100.0 : $percent;?>
-                                        <span style="width: <?php echo $percent; ?>%;"></span>
+                                    <span style="width: 100%;">
                                     </div>
                                     <div class="amounts">
                                         <div class="wrapper-row">
                                             <div class="left-amount">
-                                               <span><?php echo leyka_amount_format($campaign->total_funded);?></span>
-                                                <span>собрано</span>
-                                            </div>
-                                            <div class="right-amount">
-                                               <span><?php 
-                                                    $left_sum = $campaign->target - $campaign->total_funded;
-                                                    echo leyka_amount_format($campaign->target - $campaign->total_funded);?></span>
-                                                <span>осталось</span>
+                            
+                                               <span>1 339 400</span>
+                                                <span>Собрана вся сумма. Спасибо!</span>
                 
                                             </div>
                                             
                                         </div>
                                     </div>
-                                    <a href="<?php echo get_home_url(); ?>/zhenya-kazakevich/#form-link"><span class="btn to-help now">Помочь сейчас</span></a>
+                                    <a href="<?php echo get_home_url(); ?>/zhenya-kazakevich/#form-link"><span class="btn to-help now disable">Помочь сейчас</span></a>
                             </div>
                        </div>
                        <div class="col-xs-10">

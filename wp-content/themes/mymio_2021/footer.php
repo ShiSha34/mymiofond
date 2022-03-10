@@ -63,7 +63,7 @@
                 </div>
                 <div class="footer-help col-lg-4 col-md-offset-2 col-xs-12">
                     <div class="footer-wrap">
-                        <a href="<?php echo get_home_url(); ?>/kontakty/.request-form-container"><span class="btn need-help">Нужна помощь?</span></a>
+                        <a href="<?php echo get_home_url(); ?>/kontakty/#request-form-container"><span class="btn need-help">Нужна помощь?</span></a>
                     </div>
                     <div class="footer-wrap">
                         <a href="<?php echo get_home_url(); ?>/pomoch-sejchas"><span class="btn to-help">Хочу помочь</span></a>

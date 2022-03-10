@@ -447,7 +447,7 @@ get_header();
             </div>
 
         </section>
-        <section class="request-form-container">
+        <section class="request-form-container" id="request-form-container">
             <div class="maxwidth-theme">
              <div class="heading-article">
                    <h1>Как принять участие в проекте «Профессия»?</h1>
@@ -464,7 +464,7 @@ get_header();
         </section> 
 
         <div class="prof-fixed-button">
-              <span> <a href=".request-form-container">Подать заявку на<br>участие в проекте<br>«Профессия»</a></span>
+              <span> <a href="#request-form-container">Подать заявку на<br>участие в проекте<br>«Профессия»</a></span>
         </div>
 
 	</main><!-- #main -->

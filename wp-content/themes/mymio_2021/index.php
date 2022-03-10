@@ -373,7 +373,7 @@ get_header();
                                 </div>
                     </li>
                     
-                    <li>
+                    <li class="hide">
                       <div class="image">
                                    <a href="<?php echo get_home_url(); ?>/programmy/srochnaya-pomoshh/"></a>
                                     <img src="<? echo get_template_directory_uri()?>/assets/images/pages/programms/srochnaya-pomosch.png" alt="Папа держит ребенка за руку">
@@ -444,26 +444,26 @@ get_header();
                 });
             </script>
             <span id="srochniy-sbor"></span>
-            <section class="need-ur-help">
+            <section class="need-ur-help" id="need-ur-help">
               <div class="maxwidth-theme">
                <div class="heading-article">
                        <h1 style="margin-bottom: 0;">Срочно требуется помощь</h1>
                 </div>
                    <div id="help" class="flexslider" style="direction:ltr;">
                      <ul class="slides">
-                      
-                       <li>
-                       <div><a href="<?php echo get_home_url(); ?>/daniil-vassaliev/"></a>
-                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/d_vassaliev.png" alt="">
+                     <li>
+                       <div><a href="<?php echo get_home_url(); ?>/zhenya-kazakevich-2/"></a>
+                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/zhenya-kazakevich-2.png" alt="">
                        <div class="img-label item">
-                                   <?php $campaign = new Leyka_Campaign(30767);?>
+                                   <?php $campaign = new Leyka_Campaign(40714);?>
                                     <div class="boy-name">
                                         <div class="wrapper-row">
-                                                <span>Даниил Вассалиев</span>
-                                                <span>13 лет</span>
+                                                <span>Женя Казакевич</span>
+                                                <span>29 лет</span>
                                         </div>
                                     </div>
-                                    <span class="sub-item">Все было хорошо, пока Даня не простудился. Оказалось, мышц, чтобы кашлять уже недостаточно. Близкие об этом не знали. Не знали и врачи. Сейчас Даня в реанимации и дышать ему помогает трубка в горле. Чтобы Даня вернулся к учебе, увлечениям и семье в Нижний Новгород поедет врач, аппарат НИВЛ и интрапульмональный перкуссионный вентилятор.</span>
+                                    <span class="sub-item">Женя Казакевич вновь сражается с миодистрофией Дюшенна. Он не сдался ни разу, он держится и не отступает, но болезнь находит всё новые и новые способы атаки.<br>
+Жене необходима оплата длительного лечения с применением медикаментов,  расходных материалов, лабораторных исследований и регулярной поддержки медицинского персонала, оплата двухместной палаты, реанимации, постоянного мониторинга (обследования+КТ), энтерального питание и прочее.</span>
                                     <div class="progress-bar">
                                         <?php $percent = $campaign->target ? round(100.0 * $campaign->total_funded / $campaign->target, 1) : 0;
             $percent = $percent > 100.0 ? 100.0 : $percent;?>
@@ -485,23 +485,23 @@ get_header();
                                             
                                         </div>
                                     </div>
-                                    <a href="<?php echo get_home_url(); ?>/daniil-vassaliev/"><span class="btn to-help now">Помочь сейчас</span></a>
+                                    <a href="<?php echo get_home_url(); ?>/zhenya-kazakevich-2/"><span class="btn to-help now">Помочь сейчас</span></a>
                             </div>
                        </div>
                        </li>
+
                        <li>
-                      
-                       <div><a href="<?php echo get_home_url(); ?>/zhenya-kazakevich/"></a>
-                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/zhenya_kazakevich.png" alt="">
-                           <div class="img-label item">
-                                   <?php $campaign = new Leyka_Campaign(26595);?>
+                       <div><a href="<?php echo get_home_url(); ?>/grisha-hramczov/"></a>
+                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/grisha_hramtsov.png" alt="">
+                       <div class="img-label item">
+                                   <?php $campaign = new Leyka_Campaign(41266);?>
                                     <div class="boy-name">
                                         <div class="wrapper-row">
-                                                <span>Женя Казакевич</span>
-                                                <span>28 лет</span>
+                                                <span>Гриша Храмцов</span>
+                                                <span>11 лет</span>
                                         </div>
                                     </div>
-                                    <span class="sub-item">Женя – настоящий победитель. В августе ему исполнилось 28 лет. Он не раз побеждал болезнь: миодистрофия Дюшенна как будто пугалась достижений парня и переставала на время прогрессировать. Сейчас Жене и его маме как никогда требуется ваша поддержка. Женя попал в реанимацию в родном городе Азов.</span>
+                                    <span class="sub-item">Гриша активный и любознательный парень, учится в школе, его любимый урок адаптивная физическая культура. Из-за болезни Грише важно регулярно разрабатывать руки и ноги. Мы открываем сбор на тренажер активно-пассивного типа, который поможет Грише поддерживать физическую активность в любое время.</span>
                                     <div class="progress-bar">
                                         <?php $percent = $campaign->target ? round(100.0 * $campaign->total_funded / $campaign->target, 1) : 0;
             $percent = $percent > 100.0 ? 100.0 : $percent;?>
@@ -514,12 +514,77 @@ get_header();
                                                 <span>Собрана вся сумма. Спасибо!</span>
                                             </div>
                                             
+                                            
                                         </div>
                                     </div>
-                                    <a href="<?php echo get_home_url(); ?>/zhenya-kazakevich/"><span class="btn to-help now disable">Помочь сейчас</span></a>
+                                    <a><span class="btn to-help now disable">Помочь сейчас</span></a>
                             </div>
                        </div>
                        </li>
+
+                       <li>
+                       <div><a href="<?php echo get_home_url(); ?>/daniil-vassaliev/"></a>
+                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/d_vassaliev.png" alt="">
+                       <div class="img-label item">
+                                   <?php $campaign = new Leyka_Campaign(30767);?>
+                                    <div class="boy-name">
+                                        <div class="wrapper-row">
+                                                <span>Даниил Вассалиев</span>
+                                                <span>13 лет</span>
+                                        </div>
+                                    </div>
+                                    <span class="sub-item">Все было хорошо, пока Даня не простудился. Оказалось, мышц, чтобы кашлять уже недостаточно. Близкие об этом не знали. Не знали и врачи. Сейчас Даня в реанимации и дышать ему помогает трубка в горле. Чтобы Даня вернулся к учебе, увлечениям и семье в Нижний Новгород поедет врач, аппарат НИВЛ и интрапульмональный перкуссионный вентилятор.</span>
+                                    <div class="progress-bar">
+                                        <?php $percent = $campaign->target ? round(100.0 * $campaign->total_funded / $campaign->target, 1) : 0;
+            $percent = $percent > 100.0 ? 100.0 : $percent;?>
+                                        <span style="width: <?php echo $percent; ?>%;"></span>
+                                    </div>
+                                    <div class="amounts">
+                                        <div class="wrapper-row">
+                                            <div class="left-amount">
+                                               <span><?php echo leyka_amount_format($campaign->total_funded);?></span>
+                                                <span>Собрана вся сумма. Спасибо!</span>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <a><span class="btn to-help now disable">Помочь сейчас</span></a>
+                            </div>
+                       </div>
+                       </li>
+                       <li>
+                       <div><a href="<?php echo get_home_url(); ?>/kirill-shushkin/"></a>
+                       <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/kirill-shushkin.png" alt="">
+                       <div class="img-label item">
+                                   <?php $campaign = new Leyka_Campaign(40354);?>
+                                    <div class="boy-name">
+                                        <div class="wrapper-row">
+                                                <span>Кирилл Шушкин</span>
+                                                <span>24 года</span>
+                                        </div>
+                                    </div>
+                                    <span class="sub-item">Гастроэнтеролог дистанционно проконсультировала парня и назначила специализированное лечебное питание, которое облегчает усвоение всех нужных питательных веществ у пациентов с резко пониженной способностью всасывания. Кирилл попробовал так питаться целый месяц и стал вновь набирать в весе. Стоимость запаса лечебного питания на год – 60 000 рублей.</span>
+                                    <div class="progress-bar">
+                                        <?php $percent = $campaign->target ? round(100.0 * $campaign->total_funded / $campaign->target, 1) : 0;
+            $percent = $percent > 100.0 ? 100.0 : $percent;?>
+                                        <span style="width: <?php echo $percent; ?>%;"></span>
+                                    </div>
+                                    <div class="amounts">
+                                        <div class="wrapper-row">
+                                        <div class="left-amount">
+                                               <span>60 000</span>
+                                                <span>Собрана вся сумма. Спасибо!</span>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <a href="<?php echo get_home_url(); ?>/kirill-shushkin/"><span class="btn to-help now disable">Помочь сейчас</span></a>
+                            </div>
+                       </div>
+                       </li>
+                       
                        <li>
                        <div><a href="<?php echo get_home_url(); ?>/batyr-hajydov/"></a>
                        <img src="<? echo get_template_directory_uri()?>/assets/images/pages/glavnaya/batyr-hyjydov.png" alt="">

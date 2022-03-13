@@ -159,7 +159,7 @@ function formResultHandler(response, currentForm) {
         createUser(email, elmaId);
 
         currentForm.trigger('reset');
-        result.html('Ваша анкета успешно отправлена!');
+        result.html('Заявка успешно отправлена! Координатор свяжется с вами в течение 3-4 рабочих дней по указанному телефону.');
         if (result.hasClass('success')) {
             result.removeClass('success');
         }

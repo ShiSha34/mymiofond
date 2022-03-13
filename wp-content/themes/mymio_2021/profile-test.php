@@ -304,7 +304,7 @@ get_header();
                                     [
                                         'kind' => 'radio',
                                         'question' => 'Указанный адрес регистрации совпадает с адресом проживания?',
-                                        'name' => '',
+                                        'name' => 'reg_same_live',
                                         'items' => [
                                             'Да',
                                             'Нет',
@@ -327,14 +327,14 @@ get_header();
                                     [
                                         'kind' => 'radio',
                                         'question' => 'Указанный адрес регистрации совпадает с почтовым адресом?',
-                                        'name' => '',
+                                        'name' => 'reg_same_post',
                                         'items' => [
                                             'Да',
                                             'Нет',
                                         ],
                                         'condition_relation' => 'diff_post_address'
                                     ],
-                                    [
+									[
                                         'kind' => 'input',
                                         'elma_name' => 'main_ank_address_mail_pod',
                                         'type' => 'address',
@@ -348,49 +348,16 @@ get_header();
                                         ]
                                     ],
                                     [
-                                        'kind' => 'text_block',
-                                        'caption' => 'Официальный представитель подопечного',
-                                        'text' => 'Если Вы старше 18 лет и заполняете анкету самостоятельно, то дальше вы указываете контакты близкого человека, с которым Фонд может поддерживать связь. Если подопечный младше 18 лет, в этом случае заполняет анкету его законный представитель, который оформлял документы с Фондом'
-                                    ],
-                                    [
-                                        'kind' => 'select',
-                                        'required' => true,
-                                        'elma_name' => 'main_ank_relation',
-                                        'with_input' => false,
-                                        'placeholder' => 'Кем вы приходитесь подопечному?',
-                                        'name' => 'relation',
-                                        'options' => [
-                                            'Мама',
-                                            'Папа',
-                                            'Опекун',
-                                            'Попечитель',
+                                        'kind' => 'checkbox',
+                                        'question' => '',
+                                        'elma_name' => '',
+                                        'required'	=> true,
+                                        'items' => [
+                                            [
+                                                'label' => 'Данные заполнены верно',
+                                                'name' => 'date_of_birth'
+                                            ],
                                         ],
-                                    ],
-                                    /*[
-                                        'kind' => 'input',
-                                        'required' => true,
-                                        'elma_name' => 'main_ank_fio_pred',
-                                        'type' => 'text',
-                                        'placeholder' => 'ФИО',
-                                        'label' => '',
-                                        'name' => 'fio_pred'
-                                    ],*/
-                                    [
-                                        'kind' => 'input',
-//                                        'required' => true,
-                                        'elma_name' => 'main_ank_phone1',
-                                        'type' => 'phone',
-                                        'placeholder' => 'Телефон',
-                                        'label' => '',
-                                        'name' => 'phone1'
-                                    ],
-                                    [
-                                        'kind' => 'input',
-                                        'type' => 'phone',
-                                        'elma_name' => 'main_ank_phone22',
-                                        'placeholder' => 'Резервный телефон',
-                                        'label' => '',
-                                        'name' => 'phone2'
                                     ],
                                     /*[
                                         'kind' => 'input',

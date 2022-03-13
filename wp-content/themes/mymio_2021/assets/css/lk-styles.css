@@ -22,6 +22,8 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
+    text-align:center;
+    font-weight:bold;
 }
 
 .lk-tab {
@@ -30,7 +32,7 @@
     border-bottom: 2px solid #009D9A;
     padding: 5px 0 5px 10px;
     cursor: pointer;
-    width: calc(100% / 6);
+    width: calc(100% / 5);
     overflow: hidden;
     white-space: nowrap;
     transition: all ease .3s;

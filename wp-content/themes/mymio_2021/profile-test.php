@@ -120,10 +120,9 @@ get_header();
                 <div class="lk-tabs">
                     <span class="lk-tab active" data-tab="1">Основная информация</span>
                     <span class="lk-tab" data-tab="2">Медицинская анкета</span>
-                    <span class="lk-tab" data-tab="3">Вкладка 3</span>
-                    <span class="lk-tab" data-tab="4">Вкладка 4</span>
-                    <span class="lk-tab" data-tab="5">Вкладка 5</span>
-                    <span class="lk-tab" data-tab="6">Вкладка 6</span>
+                    <span class="lk-tab" data-tab="3">Документы</span>
+                    <span class="lk-tab" data-tab="4">Участие в программах</span>
+                    <span class="lk-tab" data-tab="5">Архив мед.анкет</span>
                 </div>
                 <div class="lk-body">
                     <div class="lk-form active" data-form="1">
@@ -131,62 +130,9 @@ get_header();
                             <?php
                             $form_settings = [
                                 'caption' => 'Персональные данные Подопечного',
-                                'submit_button' => 'Отправить',
+                                'submit_button' => 'Подписать и отправить',
                                 'name' => 'main_info',
                                 'form_fields' => [
-                                    /*[
-                                        'kind' => 'input',
-                                        'type' => 'text',
-                                        'required' => true,
-                                        'placeholder' => 'ФИО',
-                                        'label' => '',
-                                        'name' => 'fio_podop',
-                                        'elma_name' => 'main_ank_fio_podop',
-                                    ],*/
-                                    /*[
-                                        'kind' => 'checkbox',
-                                        'question' => '',
-                                        'elma_name' => '',
-                                        'items' => [
-                                            [
-                                                'label' => 'Поставьте галочку, если Вам исполнилось 18 лет и Вы заполняете анкету самостоятельно:',
-                                                'name' => 'date_of_birth'
-                                            ],
-                                        ],
-                                    ],*/
-                                    /*[
-                                        'kind' => 'input',
-                                        'elma_name' => 'main_ank_date_of_birth',
-                                        'required' => true,
-                                        'type' => 'date',
-                                        'placeholder' => 'Дата рождения',
-                                        'label' => '',
-                                        'name' => 'date_of_birth'
-                                    ],*/
-                                    /*[
-                                        'kind' => 'select',
-                                        'required' => true,
-                                        'with_input' => true,
-                                        'label_for_input' => 'укажите гражданство',
-                                        'placeholder' => 'Гражданство',
-                                        'name' => 'citizenship',
-                                        'elma_name' => 'main_ank_citizenship',
-                                        'options' => [
-                                            'РФ',
-                                        ],
-                                    ],*/
-                                    /*[
-                                        'kind' => 'select',
-                                        'required' => true,
-                                        'with_input' => true,
-                                        'label_for_input' => 'Укажите диагноз',
-                                        'placeholder' => 'Диагноз',
-                                        'name' => 'diagnosis',
-                                        'elma_name' => 'main_ank_diagnosis',
-                                        'options' => [
-                                            'Мышечная дистрофия Дюшенна/Беккера',
-                                        ],
-                                    ],*/
                                     [
                                         'kind' => 'select',
                                         'required' => true,
@@ -208,9 +154,136 @@ get_header();
                                         'elma_name' => 'main_ank_place_of_birth',
                                         'placeholder' => 'Место рождения',
                                         'label' => '',
-                                        'name' => 'place_of_birth'
+                                        'name' => 'main_info_place_of_birth'
+                                    ],
+                                    
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'type' => 'text',
+                                        'elma_name' => 'main_ank_pass_series',
+                                        'placeholder' => 'Серия паспорта подопечного',
+                                        'label' => '',
+                                        'name' => 'pass_series'
                                     ],
                                     [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'type' => 'text',
+                                        'elma_name' => 'main_ank_pass_number',
+                                        'placeholder' => 'Номер паспорта подопечного',
+                                        'label' => '',
+                                        'name' => 'pass_number'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'type' => 'text',
+                                        'elma_name' => 'main_ank_pass_issuance',
+                                        'placeholder' => 'Когда выдан?',
+                                        'label' => '',
+                                        'name' => 'pass_issuance'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'type' => 'text',
+                                        'elma_name' => 'main_ank_pass_authority',
+                                        'placeholder' => 'Наименование органа, выдавшего документ',
+                                        'label' => '',
+                                        'name' => 'pass_authority'
+                                    ],
+                                    [
+                                        'kind' => 'text_block',
+                                        'caption' => 'Официальный представитель подопечного',
+                                        'text' => 'Если Вы старше 18 лет и заполняете анкету самостоятельно, то дальше вы указываете контакты близкого человека, с которым Фонд может поддерживать связь. Если подопечный младше 18 лет, в этом случае заполняет анкету его законный представитель, который оформлял документы с Фондом'
+                                    ],
+                                    [
+                                        'kind' => 'select',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_relation',
+                                        'with_input' => false,
+                                        'placeholder' => 'Кем вы приходитесь подопечному?',
+                                        'name' => 'relation',
+                                        'options' => [
+                                            'Мама',
+                                            'Папа',
+                                            'Опекун',
+                                            'Попечитель',
+                                        ],
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_rel_pass_series',
+                                        'type' => 'text',
+                                        'placeholder' => 'Серия паспорта представителя',
+                                        'label' => '',
+                                        'name' => 'rel_pass_series'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_rel_pass_number',
+                                        'type' => 'text',
+                                        'placeholder' => 'Номер паспорта представителя',
+                                        'label' => '',
+                                        'name' => 'rel_pass_number'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_rel_pass_issuance',
+                                        'type' => 'text',
+                                        'placeholder' => 'Когда выдан?',
+                                        'label' => '',
+                                        'name' => 'rel_pass_issuance'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_rel_pass_authority',
+                                        'type' => 'text',
+                                        'placeholder' => 'Наименование органа, выдавшего документ',
+                                        'label' => '',
+                                        'name' => 'rel_pass_authority'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_rel_address_act_pred',
+                                        'type' => 'text',
+                                        'placeholder' => 'Адрес фактического места жительства представителя',
+                                        'label' => '',
+                                        'name' => 'rel_address_act_pred'
+                                    ],
+                                    /*[
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'elma_name' => 'main_ank_fio_pred',
+                                        'type' => 'text',
+                                        'placeholder' => 'ФИО',
+                                        'label' => '',
+                                        'name' => 'fio_pred'
+                                    ],*/
+                                    [
+                                        'kind' => 'input',
+//                                        'required' => true,
+                                        'elma_name' => 'main_ank_phone1',
+                                        'type' => 'phone',
+                                        'placeholder' => 'Телефон',
+                                        'label' => '',
+                                        'name' => 'phone1'
+                                    ],
+                                    [
+                                        'kind' => 'input',
+                                        'type' => 'phone',
+                                        'elma_name' => 'main_ank_phone22',
+                                        'placeholder' => 'Резервный телефон',
+                                        'label' => '',
+                                        'name' => 'phone2'
+                                    ],
+									[
                                         'kind' => 'text_block',
                                         'caption' => 'Адрес:',
                                         'text' => 'В этом окне просим вас ввести адрес регистрации по шаблону. Пожалуйста, очень внимательно заполняйте поле. Если будут допущены ошибки, мы не сможем доставить вам адресную помощь.

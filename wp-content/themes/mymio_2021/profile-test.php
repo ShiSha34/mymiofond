@@ -49,6 +49,32 @@ get_header();
                     });
                 });
             </script>
+            
+            
+            <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js" integrity="sha512-TToQDr91fBeG4RE5RjMl/tqNAo35hSRR4cbIFasiV2AAMQ6yKXXYhdSdEpUcRE6bqsTiB+FPLPls4ZAFMoK5WA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.css" integrity="sha512-uq8QcHBpT8VQcWfwrVcH/n/B6ELDwKAdX4S/I3rYSwYldLVTs7iII2p6ieGCM13QTPEKZvItaNKBin9/3cjPAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://releases.jquery.com/git/ui/jquery-ui-git.css"/>
+            <style>
+            	.ui-state-active:hover {
+					border: 1px solid #009d9a;
+					background: #009d9a;
+					font-weight: normal;
+					color: #ffffff;
+				}
+				.ui-menu {
+					background: #EDFFFE;
+					max-width: 530px;
+					max-height:300px;
+					overflow-y:auto;
+					overflow-x:hidden;
+				}
+				.ui-menu .ui-menu-item {
+				    line-height: 22px;
+				    font-size: 16px;
+				    color: grey;
+				}
+			</style>
         </div>
 
         <div class="maxwidth-theme overfl">
@@ -1852,10 +1878,106 @@ get_header();
                         </section>
                     </div>
                     <div class="lk-form" data-form="3">
-                        <p>Форма 3</p>
+Документы
                     </div>
                     <div class="lk-form" data-form="4">
-                        <p>Форма 4</p>
+                        <?php 
+                                $form_settings = [
+                                	'caption' => '',
+                                    'submit_button' => 'Продолжить',
+                                    'tab' => '4',
+                                    'name' => 'program_block',
+                                    'form_fields' => [
+                                        [
+                                            'kind' => 'select',
+                                            'name' => 'help_program',
+                                            'placeholder' => 'Выбрать',
+                                            'question' => 'Выберите программу, в которой вы хотели бы принять участие',
+                                            'options' => [
+                                                'Адресная помощь',
+                                                'Мы вместе'
+                                            ],
+                                    		//'condition_relation' => 'help_program'
+                                            'elma_name' => 'help_program',
+                                        ],
+                                        [
+	                                        'kind' => 'input',
+	                                        'required' => false,
+	                                        'elma_name' => 'address_help_text',
+	                                        'type' => 'text',
+	                                        'placeholder' => 'Какая помощь вам нужна?',
+	                                        'label' => '',
+	                                        'name' => 'address_help_text'
+	                                    ],
+                                        [
+                                            'kind' => 'select',
+                                            'placeholder' => 'Выбрать',
+                                            'question' => 'Выберите тип мероприятия, в котором хотите принять участие?',
+                                            'with_input' => false,
+                                            'name' => 'mv_1',
+                                            'required' => false,
+                                            'options' => [
+                                                'Психолого–реабилитационный лагерь',
+                                                'Интеграционный лагерь'
+                                            ],
+                                            'elma_name' => 'mv_1',
+                                        ],
+                                        [
+                                            'kind' => 'select',
+                                            'placeholder' => 'Выбрать',
+                                            'question' => 'Когда вы узнали о диагнозе сына?',
+                                            'with_input' => false,
+                                            'name' => 'mv_2',
+                                            'required' => false,
+                                            'options' => [
+                                                'Менее полугода назад',
+                                                'Более года назад',
+    											'Давно знаем о диагнозе',
+                                            ],
+                                            'elma_name' => 'mv_2',
+                                        ],
+                                        [
+                                            'kind' => 'select',
+                                            'placeholder' => 'Выбрать',
+                                            'question' => 'Вы были раньше в подобном лагере?',
+                                            'with_input' => false,
+                                            'name' => 'mv_3',
+                                            'required' => false,
+                                            'options' => [
+                                                'Да',
+                                                'Нет',
+                                            ],
+                                            'elma_name' => 'mv_3',
+                                        ],
+	                                    [
+	                                        'kind' => 'input',
+	                                        'required' => false,
+	                                        'elma_name' => 'mv_4',
+	                                        'type' => 'text',
+	                                        'placeholder' => 'В каком году вы принимали участие в психолого–реабилитационном лагере?',
+	                                        'label' => '',
+	                                        'name' => 'mv_4'
+	                                    ],
+                                        [
+                                            'kind' => 'select',
+                                            'placeholder' => 'Выбрать',
+                                            'question' => 'Почему вы хотите принять участие в лагере?',
+                                            'with_input' => false,
+                                            'name' => 'mv_5',
+                                            'required' => false,
+                                            'options' => [
+                                                'Мне важно быть рядом с такими же семьями',
+                                                'Хочу получить информацию по особенностям заболевания',
+    											'Нуждаюсь в психологической поддержке',
+    											'Хочу отдохнуть',
+                                            ],
+                                            'elma_name' => 'mv_5',
+                                        ],
+                                    ],
+                                ];
+
+                                get_template_part('/template-parts/form-template', null, $form_settings); ?>
+                                	
                     </div>
                     <div class="lk-form" data-form="5">
                         <p>Форма 5</p>

@@ -1,8 +1,9 @@
 <?php
 $form_fields = $args['form_fields'];
-$form_caption = $args['caption'] ? $args['caption'] : '';
+$form_caption = $args['caption'] ?: '';
+$form_subcaption = $args['subcaption'] ?: '';
 $submit_button = $args['submit_button'];
-$data_tab = $args['tab'] ? $args['tab'] : '';
+$data_tab = $args['tab'] ?: '';
 $form_name = $args['name'];
 ?>
 
@@ -12,6 +13,10 @@ $form_name = $args['name'];
             <div class="contact-form__form-text">
                 <?php if ($form_caption) : ?>
                 <p class="contact-form__caption"><?= $form_caption; ?></p>
+                <?php endif; ?>
+
+                <?php if ($form_subcaption) : ?>
+                    <p class="contact-form__subcaption"><?= $form_subcaption; ?></p>
                 <?php endif; ?>
             </div>
 

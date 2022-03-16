@@ -312,6 +312,14 @@ textarea.contact-form__input {
 .contact-form__caption {
     font-weight: 600;
     font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-form__subcaption {
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 20px;
 }
 
 .contact-form__text {

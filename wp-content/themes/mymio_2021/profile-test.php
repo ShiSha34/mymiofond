@@ -182,13 +182,21 @@ get_header();
                                         'label' => '',
                                         'name' => 'main_info_place_of_birth'
                                     ],
-                                    
+                                    [
+                                        'kind' => 'input',
+                                        'required' => true,
+                                        'type' => 'text',
+                                        'elma_name' => 'main_ank_document_type',
+                                        'placeholder' => 'Вид документа',
+                                        'label' => '',
+                                        'name' => 'pass_kind'
+                                    ],
                                     [
                                         'kind' => 'input',
                                         'required' => true,
                                         'type' => 'text',
                                         'elma_name' => 'main_ank_pass_series',
-                                        'placeholder' => 'Серия паспорта подопечного',
+                                        'placeholder' => 'Серия документа подопечного',
                                         'label' => '',
                                         'name' => 'pass_series'
                                     ],
@@ -197,7 +205,7 @@ get_header();
                                         'required' => true,
                                         'type' => 'text',
                                         'elma_name' => 'main_ank_pass_number',
-                                        'placeholder' => 'Номер паспорта подопечного',
+                                        'placeholder' => 'Номер документа подопечного',
                                         'label' => '',
                                         'name' => 'pass_number'
                                     ],
@@ -206,7 +214,7 @@ get_header();
                                         'required' => true,
                                         'type' => 'text',
                                         'elma_name' => 'main_ank_pass_issuance',
-                                        'placeholder' => 'Когда выдан?',
+                                        'placeholder' => 'Дата выдачи',
                                         'label' => '',
                                         'name' => 'pass_issuance'
                                     ],
@@ -215,7 +223,7 @@ get_header();
                                         'required' => true,
                                         'type' => 'text',
                                         'elma_name' => 'main_ank_pass_authority',
-                                        'placeholder' => 'Наименование органа, выдавшего документ',
+                                        'placeholder' => 'Кем выдан',
                                         'label' => '',
                                         'name' => 'pass_authority'
                                     ],
@@ -261,7 +269,7 @@ get_header();
                                         'required' => true,
                                         'elma_name' => 'main_ank_rel_pass_issuance',
                                         'type' => 'text',
-                                        'placeholder' => 'Когда выдан?',
+                                        'placeholder' => 'Дата выдачи',
                                         'label' => '',
                                         'name' => 'rel_pass_issuance'
                                     ],
@@ -270,7 +278,7 @@ get_header();
                                         'required' => true,
                                         'elma_name' => 'main_ank_rel_pass_authority',
                                         'type' => 'text',
-                                        'placeholder' => 'Наименование органа, выдавшего документ',
+                                        'placeholder' => 'Кем выдан',
                                         'label' => '',
                                         'name' => 'rel_pass_authority'
                                     ],

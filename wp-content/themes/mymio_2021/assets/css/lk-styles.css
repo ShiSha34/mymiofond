@@ -107,11 +107,27 @@
 .lk-form__tab {
     max-width: 250px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px 30px 5px 10px;
     border-right: 2px solid #009D9A;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.lk-form__tab.locked {
+    position: relative;
+}
+
+.lk-form__tab.locked:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4qIHsgZmlsbDogIzAwOUQ5QSB9PC9zdHlsZT4KCTxwYXRoIGQ9Ik0xNSA4czAtMy0yLjUtM1MxMCA4IDEwIDh2MWg1em0yIDB2MWgydjEwSDljLTEuNyAwLTMtMS4zLTMtM1Y5aDJWOHMwLTUgNC41LTVTMTcgOCAxNyA4eiIvPgo8L3N2Zz4K');
 }
 
 .lk-form__tab:last-of-type {

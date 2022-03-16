@@ -4,6 +4,7 @@ import {getInputNames} from "./utils/getInputNames";
 import {formResultHandler} from "./utils/formResultHandler";
 import {getNeededInputs} from "./utils/getNeededInputs";
 import {fillSameValues} from "./mixins/fillSameValues";
+import {goToNextForm} from "./mixins/goToNextForm";
 
 const forms = jQuery('form.contact-form__form');
 
@@ -29,7 +30,7 @@ forms.each(function () {
             loader.addClass('active');
 
             const formId = parseInt(ctxForm.parent().parent().parent().data('form'));
-            console.log(ctxForm);
+
 
             const urlParam = formId ? 'medical' : 'main';
             const url = `https://aeqlmvgvlxcee.elma365.ru/api/extensions/3d15932c-766e-4e91-b8ff-fed442649de2/script/ward/${urlParam}/update`;
@@ -64,8 +65,9 @@ forms.each(function () {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
-                    formResultHandler(data.msg, ctxForm);
+                    if (formResultHandler(data.msg, ctxForm)) {
+                        goToNextForm(formId, $('.lk-form__tab_content[data-form]').length);
+                    }
                 })
                 .catch(function (error) {
                     console.log('Request failed', error);

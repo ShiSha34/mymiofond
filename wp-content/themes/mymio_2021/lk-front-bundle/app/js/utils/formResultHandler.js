@@ -4,7 +4,7 @@ export const formResultHandler = (response, currentForm) => {
     const result = currentForm.find('.result');
     if (response === 'success') {
         currentForm.trigger('reset');
-        result.html('Ваша анкета успешно отправлена!');
+        result.html('Ответы сохранены, переход к следующему блоку');
         if (result.hasClass('success')) {
             result.removeClass('success');
         }
@@ -17,4 +17,5 @@ export const formResultHandler = (response, currentForm) => {
     result.html('Ошибка отправки. Проверьте данные или попробуйте позже.');
     result.addClass('err');
     loader.removeClass('active');
+    return false;
 }

@@ -10,11 +10,12 @@ import './formFunctions/datepicker';
 import './formFunctions/train';
 import {maskInit} from "./formFunctions/inputMask";
 import {selectMkb} from "./formFunctions/selectMkb";
-import {tabs, checkLastActiveTabs} from "./utils/tabs";
+import {tabs, checkLastActiveTabs, checkLockedTabs} from "./utils/tabs";
 import './forms';
 
 checkLastActiveTabs('.lk-tab');
 checkLastActiveTabs('.lk-form__tab');
+checkLockedTabs();
 
 tabs('.lk-tab', '.lk-form');
 tabs('.lk-form__tab', '.lk-form__tab_content');

@@ -620,6 +620,22 @@ textarea.contact-form__input {
     display: none;
 }
 
+.lk-form__tab_content.locked .contact-form__form {
+    position: relative;
+}
+
+.lk-form__tab_content.locked .contact-form__form:after {
+    position: absolute;
+    content: '';
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    user-select: none;
+}
+
 .lk-form-container .request-form-container {
     overflow: unset;
 }

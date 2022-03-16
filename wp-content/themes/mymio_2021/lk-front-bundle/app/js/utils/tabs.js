@@ -58,3 +58,23 @@ const setActiveTabs = (tabClass, tabContentClass, tabNumber) => {
         $(currentTabContent).addClass('active');
     }
 }
+
+export const checkLockedTabs = () => {
+
+    fetch(`${homeUrl}/api/medical-questionnare-tabs.php?user_email=asdfd1231312312a@as.asa`, {
+        method: 'GET',
+    })
+        .then(res => res.text())
+        .then(data => {
+            if (!data) return;
+
+            const lockedTabsArr = data.split(',');
+            lockedTabsArr.forEach(t => {
+                const number = parseInt(t);
+                const tab = $(`.lk-form__tab[data-tab="${number}"]`);
+                const form = $(`.lk-form__tab_content[data-form="${number}"]`);
+                tab.addClass('locked');
+                form.addClass('locked');
+            })
+        });
+}

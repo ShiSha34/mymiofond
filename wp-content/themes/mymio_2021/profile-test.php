@@ -587,6 +587,7 @@ get_header();
                                         [
                                             'kind' => 'input',
                                             'type' => 'city',
+                                            'question' => 'Если вы не знаете точное название заболевания, не ориентируйтесь на подсказки.',
                                             'placeholder' => 'Выбор из МКБ',
                                             'label' => '',
                                             'required' => false,
